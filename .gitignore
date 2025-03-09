@@ -1,0 +1,29 @@
+# Node.js dependencies
+node_modules
+
+# Parcel cache
+.parcel-cache
+.cache
+
+# Compiled output
+dist
+
+# Environment files (if any)
+.env
+.env.local
+
+# MacOS system files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build-related files
+/build
+
+# Ignore specific IDE/editor files
+.idea
+.vscode
+*.iml

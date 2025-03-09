@@ -1,0 +1,251 @@
+@use "variables" as *;
+
+.mobile-product-only {
+  display: block;
+  background-color: #f6f6f5;
+  @media (min-width: 1100px) {
+    display: none !important;
+  }
+}
+
+.desktop-product-only {
+  display: none;
+  @media (min-width: 1100px) {
+    display: block !important;
+  }
+}
+
+.breadcrumbs-desktop {
+  display: none;
+  font-size: 11px;
+  font-weight: 200;
+  margin-top: 30px;
+
+  @media (min-width: 1100px) {
+    display: flex !important;
+    align-items: center;
+  }
+  .back-button {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+}
+
+.product-details {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  @media (max-width: 1099px) {
+    flex-direction: column;
+    padding: 0;
+
+    .breadcrumbs,
+    .product-image {
+      padding: 0;
+    }
+
+    .product-info {
+      padding: 0 20px;
+      padding-bottom: 30px;
+      background-color: #f6f6f5;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    flex-direction: row;
+    gap: 20px;
+
+    .product-image {
+      flex: 7;
+    }
+
+    .product-info {
+      flex: 3;
+      padding-left: 40px;
+      padding-right: 50px;
+    }
+  }
+}
+
+.breadcrumbs-mobile {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  padding-top: 15px;
+
+  padding-bottom: 15px;
+  .back-button {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 770px;
+}
+
+.product-name-second {
+  font-weight: 600;
+}
+
+.product-name-first {
+  font-weight: 200;
+  opacity: 0.5;
+}
+
+.product-info-content {
+  @media (min-width: 1100px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.product-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #4d4d4d;
+  @media (min-width: 1100px) {
+    margin-top: 75px;
+  }
+}
+
+.product-subtitle {
+  font-size: 14px;
+  font-weight: 200;
+  color: #4d4d4d;
+  margin-bottom: 20px;
+}
+
+.divider {
+  border: none;
+  border-top: 1.5px solid #9f938b;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.product-description {
+  font-size: 14px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.icon-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9f938b;
+}
+
+.product-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  .icon-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1 1 45%;
+  }
+}
+
+.purchase-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #9f938b;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+    opacity: 0.7;
+
+    input[type="radio"] {
+      accent-color: #4d4d4d;
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: #f8f8f8;
+    }
+  }
+
+  input[type="radio"]:checked + span {
+    color: #4d4d4d;
+    font-weight: 600;
+    opacity: 1;
+  }
+}
+
+.quantity-add-to-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #333;
+    padding: 5px;
+
+    button {
+      width: 30px;
+      height: 30px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #bfabab;
+      }
+    }
+
+    .quantity {
+      width: 30px;
+      text-align: center;
+    }
+  }
+
+  .add-to-cart {
+    flex: 1;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border: none;
+    background-color: #bfabab;
+    color: #4d4d4d;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    &:hover {
+      background-color: #8c7b75;
+      color: #fff;
+    }
+  }
+}

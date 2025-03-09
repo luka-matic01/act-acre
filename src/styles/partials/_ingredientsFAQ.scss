@@ -1,0 +1,51 @@
+.ingredients-faq {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-left: 200px;
+  color: #4d4d4d;
+  @media (max-width: 1099px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .ingredient-item {
+    padding: 15px 0;
+
+    .ingredient-header {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    .ingredient-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .ingredient-content.show {
+      max-height: 200px;
+    }
+
+    .icon {
+      font-size: 18px;
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .ingredients-faq {
+    width: 40%;
+  }
+}

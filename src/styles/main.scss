@@ -1,0 +1,18 @@
+@use "partials/variables" as *;
+@use "partials/header";
+@use "partials/productDetails";
+@use "partials/ingredientsFAQ";
+@use "partials/carousel";
+
+body {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+li,
+a {
+  font-family: $font-primary;
+  font-weight: $font-regular;
+}
